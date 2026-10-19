@@ -1,12 +1,19 @@
+# [CONTROL_SWITCH: ON] -- Change to OFF to disable globally
+STATUS="ON"
+
+if [ "$STATUS" = "OFF" ]; then
+    exit 0
+fi
+
 # 1. Force x86 Architecture Detection
 resetprop ro.product.cpu.abi "x86"
 resetprop ro.product.cpu.abilist "x86,armeabi-v7a,armeabi"
 resetprop ro.product.cpu.abilist32 "x86,armeabi-v7a,abilist32"
-resetprop ro.product.cpu.abilist64 "x86_64"
+resetprop ro.product.cpu.abilist64 "X86_64"
 
 # 2. Fake the Hypervisor & QEMU Environment
 resetprop ro.boot.hypervisor 1
-resetprop ro.hypervisor.type "kvm"
+resetprop hypervisor.type "kvm"
 resetprop ro.kernel.qemu 1
 resetprop ro.boot.qemu 1
 
@@ -24,12 +31,3 @@ resetprop ro.product.model "sdk_gphone_x86"
 resetprop ro.product.brand "google"
 resetprop ro.product.name "sdk_gphone_x86"
 resetprop ro.product.device "generic_x86"
-# [CONTROL_SWITCH: ON] -- Change to OFF to disable globally
-STATUS="ON"
-
-if [ "$STATUS" = "OFF" ]; then
-    exit 0
-fi
-
-# Apnar ashol bypass ar memory patch er command gulo ekhane thakbe...
-echo "Bypass Activated Successfully!"
