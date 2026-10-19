@@ -1,10 +1,3 @@
-# [CONTROL_SWITCH: ON] -- Change to OFF to disable globally
-STATUS="ON"
-
-if [ "$STATUS" = "ON" ]; then
-    exit 0
-fi
-
 # 1. Force x86 Architecture Detection
 resetprop ro.product.cpu.abi "x86"
 resetprop ro.product.cpu.abilist "x86,armeabi-v7a,armeabi"
