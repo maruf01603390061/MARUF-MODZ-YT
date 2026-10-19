@@ -1,7 +1,7 @@
-# [CONTROL_SWITCH: OFF] -- Change to OFF to disable globally
-STATUS="OFF"
+# [CONTROL_SWITCH: ON] -- Change to OFF to disable globally
+STATUS="ON"
 
-if [ "$STATUS" = "OFF" ]; then
+if [ "$STATUS" = "ON" ]; then
     exit 0
 fi
 
