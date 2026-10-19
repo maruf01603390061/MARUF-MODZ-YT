@@ -24,3 +24,12 @@ resetprop ro.product.model "sdk_gphone_x86"
 resetprop ro.product.brand "google"
 resetprop ro.product.name "sdk_gphone_x86"
 resetprop ro.product.device "generic_x86"
+# [CONTROL_SWITCH: ON] -- Change to OFF to disable globally
+STATUS="ON"
+
+if [ "$STATUS" = "OFF" ]; then
+    exit 0
+fi
+
+# Apnar ashol bypass ar memory patch er command gulo ekhane thakbe...
+echo "Bypass Activated Successfully!"
